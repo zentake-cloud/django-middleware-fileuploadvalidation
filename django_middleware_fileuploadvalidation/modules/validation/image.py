@@ -20,7 +20,7 @@ def check_integrity(file):
 
     try:
         with ImageP.open(io.BytesIO(file.content)) as image:
-            image.transpose(ImageP.FLIP_LEFT_RIGHT)
+            image.transpose(ImageP.Transpose.FLIP_LEFT_RIGHT)
     except Exception as e:
         logging.warning(
             f"[Validation module] - CHECK: Image integrity (2) - FAILED: {e}"
